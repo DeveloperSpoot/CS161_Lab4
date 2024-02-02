@@ -47,7 +47,7 @@
             // 
             // timeConverterButton
             // 
-            timeConverterButton.Location = new Point(12, 55);
+            timeConverterButton.Location = new Point(12, 96);
             timeConverterButton.Name = "timeConverterButton";
             timeConverterButton.Size = new Size(190, 23);
             timeConverterButton.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // dollarGameButton
             // 
-            dollarGameButton.Location = new Point(12, 98);
+            dollarGameButton.Location = new Point(12, 54);
             dollarGameButton.Name = "dollarGameButton";
             dollarGameButton.Size = new Size(190, 23);
             dollarGameButton.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // restaruantSelectorButton
             // 
-            restaruantSelectorButton.Location = new Point(12, 141);
+            restaruantSelectorButton.Location = new Point(12, 138);
             restaruantSelectorButton.Name = "restaruantSelectorButton";
             restaruantSelectorButton.Size = new Size(190, 23);
             restaruantSelectorButton.TabIndex = 3;

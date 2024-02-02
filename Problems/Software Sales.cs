@@ -13,33 +13,36 @@
             {
                 if (packagesTextBox.Text == "") { return; }
 
-                decimal numberOfPackages = decimal.Parse(packagesTextBox.Text);
+                double numberOfPackages = double.Parse(packagesTextBox.Text);
+                double totalCostB4Discount = numberOfPackages * 99;
 
                 if (numberOfPackages >= 10 && numberOfPackages <= 19)
                 {
-                    displayLabel.Text =(99.00 *0.10).ToString("c");
-                    totalLabel.Text = (99.00 * 1.10).ToString("c");
+                    displayLabel.Text =(totalCostB4Discount * 0.20).ToString("c");
+                    totalLabel.Text = (totalCostB4Discount - (totalCostB4Discount*.20)).ToString("c");
                     return;
                 }
 
+
                 if (numberOfPackages >= 20 && numberOfPackages <= 49)
                 {
-                    displayLabel.Text = (99.00 * 0.30).ToString("c");
-                    totalLabel.Text = (99.00 * 1.30).ToString("c");
+                    displayLabel.Text = (totalCostB4Discount * 0.30).ToString("c");
+                    totalLabel.Text = (totalCostB4Discount - (totalCostB4Discount * .30)).ToString("c");
                     return;
+
                 }
 
                 if (numberOfPackages >= 50 && numberOfPackages <= 99)
                 {
-                    displayLabel.Text = (99.00 * 0.40).ToString("c");
-                    totalLabel.Text = (99.00 * 1.40).ToString("c");
+                    displayLabel.Text = (totalCostB4Discount * 0.40).ToString("c");
+                    totalLabel.Text = (totalCostB4Discount - (totalCostB4Discount * .40)).ToString("c");
                     return;
                 }
 
                 if (numberOfPackages >= 100)
                 {
-                    displayLabel.Text = (99.00 * 0.50).ToString("c");
-                    totalLabel.Text = (99.00 * 1.50).ToString("c");
+                    displayLabel.Text = (totalCostB4Discount * 0.50).ToString("c");
+                    totalLabel.Text = (totalCostB4Discount - (totalCostB4Discount * .50)).ToString("c");
                     return;
                 }
 
