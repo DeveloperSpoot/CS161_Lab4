@@ -29,7 +29,8 @@ namespace CS161_Lab4
 
         private void restaruantSelectorButton_Click(object sender, EventArgs e)
         {
-
+            Restaurant_Selector form = new Restaurant_Selector();
+            form.Show();
         }
 
         private void workshopSelectorButton_Click(object sender, EventArgs e)
