@@ -51,7 +51,7 @@
             timeConverterButton.Name = "timeConverterButton";
             timeConverterButton.Size = new Size(190, 23);
             timeConverterButton.TabIndex = 1;
-            timeConverterButton.Text = "Time Converter";
+            timeConverterButton.Text = "Time Calculator";
             timeConverterButton.UseVisualStyleBackColor = true;
             timeConverterButton.Click += timeConverterButton_Click;
             // 

@@ -22,7 +22,8 @@ namespace CS161_Lab4
 
         private void timeConverterButton_Click(object sender, EventArgs e)
         {
-
+            Time_Calculator form = new Time_Calculator();
+            form.Show();
         }
 
 
