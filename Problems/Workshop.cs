@@ -14,25 +14,25 @@
             decimal lodgingFee = 0;
             decimal days = 0;
 
-            if(workShopListBox.SelectedItem == "Handling Stress")
+            if (workShopListBox.SelectedItem == "Handling Stress")
             {
                 registerFee = 1000m;
                 days = 3m;
             }
 
-            if(workShopListBox.SelectedItem == "Time Management")
+            if (workShopListBox.SelectedItem == "Time Management")
             {
                 registerFee = 800m;
                 days = 3m;
             }
 
-            if(workShopListBox.SelectedItem == "Supervision Skills")
+            if (workShopListBox.SelectedItem == "Supervision Skills")
             {
                 registerFee = 1500m;
                 days = 3m;
             }
 
-            if(workShopListBox.SelectedItem == "Negotation")
+            if (workShopListBox.SelectedItem == "Negotation")
             {
                 registerFee = 1300m;
                 days = 5m;
@@ -44,10 +44,10 @@
                 days = 1m;
             }
 
-            if(locationListBox.SelectedItem == "Austin")
+            if (locationListBox.SelectedItem == "Austin")
             { lodgingFee = 150m; }
 
-            if(locationListBox.SelectedItem == "Chicago")
+            if (locationListBox.SelectedItem == "Chicago")
             { lodgingFee = 225m; }
 
             if (locationListBox.SelectedItem == "Dallas")
@@ -56,12 +56,25 @@
             if (locationListBox.SelectedItem == "Orlando")
             { lodgingFee = 300m; }
 
-            if(locationListBox.SelectedItem == "Phoenix")
+            if (locationListBox.SelectedItem == "Phoenix")
             { lodgingFee = 175m; }
-            
-            if(locationListBox.SelectedItem == "Raleigh")
+
+            if (locationListBox.SelectedItem == "Raleigh")
             { lodgingFee = 150m; }
 
+            lodgingFee = lodgingFee * days;
+
+            total = lodgingFee + registerFee;
+
+            registerationLabel.Text = registerFee.ToString("c");
+            lodgingLabel.Text = lodgingFee.ToString("C");
+            totalLabel.Text = total.ToString("C");
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
