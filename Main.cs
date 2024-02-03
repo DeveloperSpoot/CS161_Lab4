@@ -35,7 +35,8 @@ namespace CS161_Lab4
 
         private void workshopSelectorButton_Click(object sender, EventArgs e)
         {
-
+            Workshop form = new Workshop();
+            form.Show();
         }
     }
 }
