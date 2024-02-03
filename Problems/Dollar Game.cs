@@ -21,10 +21,12 @@
                 if (total == 1.00m)
                 {
                     MessageBox.Show("Congrats! You made $1.00");
-                }
-                else
+                }else if (total > 1.00m)
                 {
-                    MessageBox.Show("You did not make $1.00. Try again.");
+                    MessageBox.Show("You made more than a dollar. Try agian.");
+                }else if(total < 1.00m)
+                {
+                    MessageBox.Show("You made less than a dollar. Try again.");
                 }
 
 
