@@ -7,15 +7,21 @@
             InitializeComponent();
         }
 
+        //Attemping to calculate as the client inputs their numbers, rather than requiring them to click a button.
         private void packagesTextBox_TextChanged(object sender, EventArgs e)
         {
+
+            //Making sure the client only inputs numbers into the texboxes.
             try
             {
+                //Making sure we don't attempt to run the code if textboxes are cleared.
                 if (packagesTextBox.Text == "") { return; }
 
                 double numberOfPackages = double.Parse(packagesTextBox.Text);
                 double totalCostB4Discount = numberOfPackages * 99;
 
+
+                //Checking to see if the packages brought meet the following requirements for discounts and assigning them the appropriate discount.
                 if (numberOfPackages >= 10 && numberOfPackages <= 19)
                 {
                     displayLabel.Text =(totalCostB4Discount * 0.20).ToString("c");
@@ -46,16 +52,18 @@
                     return;
                 }
 
+                //If the clint brought less than 10 packages, no discount is given.
+
                 displayLabel.Text = "No Discount.";
 
             }
-            catch (Exception ex)
+            catch (Exception ex) //Catching if the clients inputs an invalid argument in the texbox.
             {
                 MessageBox.Show("Invalid inout given, please only input numbers.");
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

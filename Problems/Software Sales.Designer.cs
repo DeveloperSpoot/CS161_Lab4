@@ -32,7 +32,7 @@
             packagesTextBox = new TextBox();
             groupBox1 = new GroupBox();
             displayLabel = new Label();
-            button1 = new Button();
+            exitButton = new Button();
             groupBox = new GroupBox();
             totalLabel = new Label();
             groupBox1.SuspendLayout();
@@ -77,16 +77,16 @@
             displayLabel.TabIndex = 0;
             displayLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // exitButton
             // 
-            button1.BackColor = Color.RosyBrown;
-            button1.Location = new Point(12, 181);
-            button1.Name = "button1";
-            button1.Size = new Size(312, 33);
-            button1.TabIndex = 3;
-            button1.Text = "EXIT";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            exitButton.BackColor = Color.RosyBrown;
+            exitButton.Location = new Point(12, 181);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(312, 33);
+            exitButton.TabIndex = 3;
+            exitButton.Text = "EXIT";
+            exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
             // 
             // groupBox
             // 
@@ -115,7 +115,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(337, 226);
             Controls.Add(groupBox);
-            Controls.Add(button1);
+            Controls.Add(exitButton);
             Controls.Add(groupBox1);
             Controls.Add(packagesTextBox);
             Controls.Add(label1);
@@ -133,7 +133,7 @@
         private TextBox packagesTextBox;
         private GroupBox groupBox1;
         private Label displayLabel;
-        private Button button1;
+        private Button exitButton;
         private GroupBox groupBox;
         private Label totalLabel;
     }
