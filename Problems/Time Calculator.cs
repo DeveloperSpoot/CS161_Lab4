@@ -12,12 +12,18 @@
             try
             {
                 decimal seconds = decimal.Parse(secondsTextBox.Text);
+                
+                if(seconds < 60)
+                {
+                    outputLabel.Text = $"{seconds.ToString()} Seconds.";
+                    return;
+                }
 
                 if(seconds >= 60 && seconds < 3600)
                 {
-                    decimal outputNumber = seconds;
+                    decimal outputNumber = seconds/60;
 
-                    outputLabel.Text = $"{outputNumber.ToString("f2")} Seconds.";
+                    outputLabel.Text = $"{outputNumber.ToString("f2")} Minutes.";
 
                     return;
                 }
@@ -26,7 +32,7 @@
                 {
                     decimal outputNumber = seconds / 3600m;
 
-                    outputLabel.Text = $"{outputNumber.ToString("f2")} Minutes.";
+                    outputLabel.Text = $"{outputNumber.ToString("f2")} Hours.";
                     return;
                 }
 
@@ -34,7 +40,7 @@
                 {
                     decimal outputNumber = seconds / 86400;
 
-                    outputLabel.Text = $"{outputNumber.ToString("f2")} Hours.";
+                    outputLabel.Text = $"{outputNumber.ToString("f2")} Days.";
                     return;
                 }
 
