@@ -15,7 +15,7 @@
                 
                 if(seconds < 60)
                 {
-                    outputLabel.Text = $"{seconds.ToString()} Seconds.";
+                    outputLabel.Text = $"{seconds} Seconds.";
                     return;
                 }
 
