@@ -38,7 +38,7 @@
                     return;
                 }
 
-                MessageBox.Show("Please tner a value greater than or equal to 60 seconds.");
+                MessageBox.Show("Please enter a value greater than or equal to 60 seconds.");
 
             }
             catch (Exception ex)
