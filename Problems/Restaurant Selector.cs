@@ -7,80 +7,70 @@
             InitializeComponent();
         }
 
-        private void checkAll()
-        {
-            bool vege = vegetarianCheckBox.Checked;
-            bool vegan = veganCheckBox.Checked;
-            bool gluten = glutenCheckBox.Checked;
+        //Create a list to contain all resutrants that don't meet the clients needs;
+        private List<string> dontShowList = new List<string>();
 
+        //Our "Main" method that gets triggered when a client adds a restrictions by updating the radio buttons;
+        private void retrieveCompatiableResturants(object sender, EventArgs e)
+        {
+            clearSelections();
+            updateRestrictions();
+            updateResturantsList();
+        }
+
+        //Resetting the output list and clearing the don't show list;
+        private void clearSelections()
+        {
+            dontShowList.Clear();
             restaruantsListBox.Items.Clear();
             restaruantsListBox.Items.Add("Joe's Gourmet Burgers"); // 0
             restaruantsListBox.Items.Add("Main Street Pizza Company"); //1
             restaruantsListBox.Items.Add("Corner Cafe"); //2
             restaruantsListBox.Items.Add("Mama's Fine Italian"); //3
             restaruantsListBox.Items.Add("The Chef's kitchen"); //4
+        }
 
-            List<string> list = new List<string>();
+        //Adding resturants to the don't show list based on selected restrictions;
+        private void updateRestrictions()
+        {
+            bool vege = vegetarianCheckBox.Checked;
+            bool vegan = veganCheckBox.Checked;
+            bool gluten = glutenCheckBox.Checked;
 
-            //Vege Check
+            //Checking each radio button and adding resturants to a list (containg resutrants to be removed/not shown) if they don't support the restrictions.
             if (vege)
             {
-                list.Add("Joe's Gourmet Burgers");
+                dontShowList.Add("Joe's Gourmet Burgers");
 
             }
 
-            //vegan Check
             if (vegan)
             {
-                list.Add("Joe's Gourmet Burgers");
-                list.Add("Main Street Pizza Company");
-                list.Add("Mama's Fine Italian");
+                dontShowList.Add("Joe's Gourmet Burgers");
+                dontShowList.Add("Main Street Pizza Company");
+                dontShowList.Add("Mama's Fine Italian");
             }
 
             if (gluten)
             {
-                list.Add("Joe's Gourmet Burgers");
-                list.Add("Mama's Fine Italian");
+                dontShowList.Add("Joe's Gourmet Burgers");
+                dontShowList.Add("Mama's Fine Italian");
             }
-
-            if (list.Exists(item => item == "Joe's Gourmet Burgers"))
-            {
-                restaruantsListBox.Items.Remove("Joe's Gourmet Burgers");
-            }
-            if (list.Exists(item => item == "Main Street Pizza Company"))
-            {
-                restaruantsListBox.Items.Remove("Main Street Pizza Company");
-            }
-            if (list.Exists(item => item == "Corner Cafe"))
-            {
-                restaruantsListBox.Items.Remove("Corner Cafe");
-            }
-            if (list.Exists(item => item == "Mama's Fine Italian"))
-            {
-                restaruantsListBox.Items.Remove("Mama's Fine Italian");
-            }
-            if (list.Exists(item => item == ("The Chef's kitchen")))
-            {
-                restaruantsListBox.Items.Remove("The Chef's kitchen");
-            }
-
         }
 
-        private void vegetarianCheckBox_CheckedChanged(object sender, EventArgs e)
+        //Updating the output list based on incompitable resutrants (don't show list).
+        private void updateResturantsList()
         {
-            checkAll();
+            //Looping through all resutrants in the don't show list and removing them from the output list.
+            dontShowList.ForEach(item => {
+                if (restaruantsListBox.Items.Contains(item) == true)
+                {
+                    restaruantsListBox.Items.Remove(item);
+                }
+            });
         }
 
-        private void veganCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            checkAll();
-        }
-
-        private void glutenCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            checkAll();
-        }
-
+        //Close upon exit button clicked;
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();

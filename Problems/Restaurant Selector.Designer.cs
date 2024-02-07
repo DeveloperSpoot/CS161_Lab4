@@ -28,109 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            glutenCheckBox = new CheckBox();
-            veganCheckBox = new CheckBox();
-            vegetarianCheckBox = new CheckBox();
-            groupBox2 = new GroupBox();
-            restaruantsListBox = new ListBox();
-            exitButton = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.glutenCheckBox = new System.Windows.Forms.CheckBox();
+            this.veganCheckBox = new System.Windows.Forms.CheckBox();
+            this.vegetarianCheckBox = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.restaruantsListBox = new System.Windows.Forms.ListBox();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(glutenCheckBox);
-            groupBox1.Controls.Add(veganCheckBox);
-            groupBox1.Controls.Add(vegetarianCheckBox);
-            groupBox1.Location = new Point(8, 9);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(129, 113);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Restrictions";
+            this.groupBox1.Controls.Add(this.glutenCheckBox);
+            this.groupBox1.Controls.Add(this.veganCheckBox);
+            this.groupBox1.Controls.Add(this.vegetarianCheckBox);
+            this.groupBox1.Location = new System.Drawing.Point(9, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(147, 143);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Restrictions";
             // 
             // glutenCheckBox
             // 
-            glutenCheckBox.AutoSize = true;
-            glutenCheckBox.Location = new Point(9, 80);
-            glutenCheckBox.Name = "glutenCheckBox";
-            glutenCheckBox.Size = new Size(88, 19);
-            glutenCheckBox.TabIndex = 2;
-            glutenCheckBox.Text = "Gluten-Free";
-            glutenCheckBox.UseVisualStyleBackColor = true;
-            glutenCheckBox.CheckedChanged += glutenCheckBox_CheckedChanged;
+            this.glutenCheckBox.AutoSize = true;
+            this.glutenCheckBox.Location = new System.Drawing.Point(10, 101);
+            this.glutenCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.glutenCheckBox.Name = "glutenCheckBox";
+            this.glutenCheckBox.Size = new System.Drawing.Size(101, 23);
+            this.glutenCheckBox.TabIndex = 2;
+            this.glutenCheckBox.Text = "Gluten-Free";
+            this.glutenCheckBox.UseVisualStyleBackColor = true;
+            this.glutenCheckBox.CheckedChanged += new System.EventHandler(this.retrieveCompatiableResturants);
+            this.glutenCheckBox.CheckStateChanged += new System.EventHandler(this.retrieveCompatiableResturants);
             // 
             // veganCheckBox
             // 
-            veganCheckBox.AutoSize = true;
-            veganCheckBox.Location = new Point(9, 52);
-            veganCheckBox.Name = "veganCheckBox";
-            veganCheckBox.Size = new Size(58, 19);
-            veganCheckBox.TabIndex = 1;
-            veganCheckBox.Text = "Vegan";
-            veganCheckBox.UseVisualStyleBackColor = true;
-            veganCheckBox.CheckedChanged += veganCheckBox_CheckedChanged;
+            this.veganCheckBox.AutoSize = true;
+            this.veganCheckBox.Location = new System.Drawing.Point(10, 66);
+            this.veganCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.veganCheckBox.Name = "veganCheckBox";
+            this.veganCheckBox.Size = new System.Drawing.Size(66, 23);
+            this.veganCheckBox.TabIndex = 1;
+            this.veganCheckBox.Text = "Vegan";
+            this.veganCheckBox.UseVisualStyleBackColor = true;
+            this.veganCheckBox.CheckedChanged += new System.EventHandler(this.retrieveCompatiableResturants);
+            this.veganCheckBox.CheckStateChanged += new System.EventHandler(this.retrieveCompatiableResturants);
             // 
             // vegetarianCheckBox
             // 
-            vegetarianCheckBox.AutoSize = true;
-            vegetarianCheckBox.Location = new Point(9, 25);
-            vegetarianCheckBox.Name = "vegetarianCheckBox";
-            vegetarianCheckBox.Size = new Size(75, 19);
-            vegetarianCheckBox.TabIndex = 0;
-            vegetarianCheckBox.Text = "Vegetarin";
-            vegetarianCheckBox.UseVisualStyleBackColor = true;
-            vegetarianCheckBox.CheckedChanged += vegetarianCheckBox_CheckedChanged;
+            this.vegetarianCheckBox.AutoSize = true;
+            this.vegetarianCheckBox.Location = new System.Drawing.Point(10, 32);
+            this.vegetarianCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vegetarianCheckBox.Name = "vegetarianCheckBox";
+            this.vegetarianCheckBox.Size = new System.Drawing.Size(86, 23);
+            this.vegetarianCheckBox.TabIndex = 0;
+            this.vegetarianCheckBox.Text = "Vegetarin";
+            this.vegetarianCheckBox.UseVisualStyleBackColor = true;
+            this.vegetarianCheckBox.CheckedChanged += new System.EventHandler(this.retrieveCompatiableResturants);
+            this.vegetarianCheckBox.CheckStateChanged += new System.EventHandler(this.retrieveCompatiableResturants);
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(restaruantsListBox);
-            groupBox2.Location = new Point(153, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(297, 110);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Restaurants";
+            this.groupBox2.Controls.Add(this.restaruantsListBox);
+            this.groupBox2.Location = new System.Drawing.Point(175, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(339, 139);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Restaurants";
             // 
             // restaruantsListBox
             // 
-            restaruantsListBox.FormattingEnabled = true;
-            restaruantsListBox.ItemHeight = 15;
-            restaruantsListBox.Items.AddRange(new object[] { "Joe's Gourmet Burgers", "Main Street Pizza Company", "Corner Cafe", "Mama's Fine Italian", "The Chef's kitchen" });
-            restaruantsListBox.Location = new Point(7, 19);
-            restaruantsListBox.Name = "restaruantsListBox";
-            restaruantsListBox.Size = new Size(284, 79);
-            restaruantsListBox.TabIndex = 0;
+            this.restaruantsListBox.FormattingEnabled = true;
+            this.restaruantsListBox.ItemHeight = 19;
+            this.restaruantsListBox.Items.AddRange(new object[] {
+            "Joe\'s Gourmet Burgers",
+            "Main Street Pizza Company",
+            "Corner Cafe",
+            "Mama\'s Fine Italian",
+            "The Chef\'s kitchen"});
+            this.restaruantsListBox.Location = new System.Drawing.Point(8, 24);
+            this.restaruantsListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.restaruantsListBox.Name = "restaruantsListBox";
+            this.restaruantsListBox.Size = new System.Drawing.Size(324, 99);
+            this.restaruantsListBox.TabIndex = 0;
             // 
             // exitButton
             // 
-            exitButton.BackColor = Color.IndianRed;
-            exitButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            exitButton.ForeColor = SystemColors.Control;
-            exitButton.Location = new Point(9, 127);
-            exitButton.Name = "exitButton";
-            exitButton.Size = new Size(441, 28);
-            exitButton.TabIndex = 2;
-            exitButton.Text = "EXIT";
-            exitButton.UseVisualStyleBackColor = false;
-            exitButton.Click += exitButton_Click;
+            this.exitButton.BackColor = System.Drawing.Color.IndianRed;
+            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exitButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.exitButton.Location = new System.Drawing.Point(10, 161);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(504, 35);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.Text = "EXIT";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // Restaurant_Selector
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(462, 164);
-            Controls.Add(exitButton);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Name = "Restaurant_Selector";
-            Text = "Restaurant_Selector";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(528, 208);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Restaurant_Selector";
+            this.Text = "Restaurant_Selector";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

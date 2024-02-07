@@ -28,137 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            penniesTextBox = new TextBox();
-            groupBox2 = new GroupBox();
-            nickelsTextBox = new TextBox();
-            groupBox3 = new GroupBox();
-            dimsTextBox = new TextBox();
-            groupBox4 = new GroupBox();
-            quartersTextBox = new TextBox();
-            checkButton = new Button();
-            exitButton = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
-            SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.penniesTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nickelsTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dimsTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.quartersTextBox = new System.Windows.Forms.TextBox();
+            this.checkButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(penniesTextBox);
-            groupBox1.Location = new Point(12, 8);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(217, 49);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Pennies";
+            this.groupBox1.Controls.Add(this.penniesTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(14, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(248, 62);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Pennies";
             // 
             // penniesTextBox
             // 
-            penniesTextBox.Location = new Point(6, 20);
-            penniesTextBox.Name = "penniesTextBox";
-            penniesTextBox.Size = new Size(202, 23);
-            penniesTextBox.TabIndex = 0;
-            penniesTextBox.Text = "0";
+            this.penniesTextBox.Location = new System.Drawing.Point(7, 25);
+            this.penniesTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.penniesTextBox.Name = "penniesTextBox";
+            this.penniesTextBox.Size = new System.Drawing.Size(230, 26);
+            this.penniesTextBox.TabIndex = 0;
+            this.penniesTextBox.Text = "0";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(nickelsTextBox);
-            groupBox2.Location = new Point(12, 63);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(217, 49);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Nickels";
+            this.groupBox2.Controls.Add(this.nickelsTextBox);
+            this.groupBox2.Location = new System.Drawing.Point(14, 80);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(248, 62);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Nickels";
             // 
             // nickelsTextBox
             // 
-            nickelsTextBox.Location = new Point(6, 20);
-            nickelsTextBox.Name = "nickelsTextBox";
-            nickelsTextBox.Size = new Size(202, 23);
-            nickelsTextBox.TabIndex = 1;
-            nickelsTextBox.Text = "0";
+            this.nickelsTextBox.Location = new System.Drawing.Point(7, 25);
+            this.nickelsTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nickelsTextBox.Name = "nickelsTextBox";
+            this.nickelsTextBox.Size = new System.Drawing.Size(230, 26);
+            this.nickelsTextBox.TabIndex = 1;
+            this.nickelsTextBox.Text = "0";
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dimsTextBox);
-            groupBox3.Location = new Point(12, 118);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(217, 49);
-            groupBox3.TabIndex = 2;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Dimes";
+            this.groupBox3.Controls.Add(this.dimsTextBox);
+            this.groupBox3.Location = new System.Drawing.Point(14, 149);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(248, 62);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dimes";
             // 
             // dimsTextBox
             // 
-            dimsTextBox.Location = new Point(6, 20);
-            dimsTextBox.Name = "dimsTextBox";
-            dimsTextBox.Size = new Size(202, 23);
-            dimsTextBox.TabIndex = 1;
-            dimsTextBox.Text = "0";
+            this.dimsTextBox.Location = new System.Drawing.Point(7, 25);
+            this.dimsTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dimsTextBox.Name = "dimsTextBox";
+            this.dimsTextBox.Size = new System.Drawing.Size(230, 26);
+            this.dimsTextBox.TabIndex = 1;
+            this.dimsTextBox.Text = "0";
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(quartersTextBox);
-            groupBox4.Location = new Point(12, 173);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(217, 49);
-            groupBox4.TabIndex = 3;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Quarters";
+            this.groupBox4.Controls.Add(this.quartersTextBox);
+            this.groupBox4.Location = new System.Drawing.Point(14, 219);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox4.Size = new System.Drawing.Size(248, 62);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Quarters";
             // 
             // quartersTextBox
             // 
-            quartersTextBox.Location = new Point(6, 20);
-            quartersTextBox.Name = "quartersTextBox";
-            quartersTextBox.Size = new Size(202, 23);
-            quartersTextBox.TabIndex = 1;
-            quartersTextBox.Text = "0";
+            this.quartersTextBox.Location = new System.Drawing.Point(7, 25);
+            this.quartersTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.quartersTextBox.Name = "quartersTextBox";
+            this.quartersTextBox.Size = new System.Drawing.Size(230, 26);
+            this.quartersTextBox.TabIndex = 1;
+            this.quartersTextBox.Text = "0";
             // 
             // checkButton
             // 
-            checkButton.Location = new Point(18, 228);
-            checkButton.Name = "checkButton";
-            checkButton.Size = new Size(202, 23);
-            checkButton.TabIndex = 4;
-            checkButton.Text = "Check";
-            checkButton.UseVisualStyleBackColor = true;
-            checkButton.Click += checkButton_Click;
+            this.checkButton.Location = new System.Drawing.Point(21, 289);
+            this.checkButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkButton.Name = "checkButton";
+            this.checkButton.Size = new System.Drawing.Size(231, 29);
+            this.checkButton.TabIndex = 4;
+            this.checkButton.Text = "Check";
+            this.checkButton.UseVisualStyleBackColor = true;
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
             // 
             // exitButton
             // 
-            exitButton.BackColor = Color.RosyBrown;
-            exitButton.Location = new Point(18, 257);
-            exitButton.Name = "exitButton";
-            exitButton.Size = new Size(202, 23);
-            exitButton.TabIndex = 5;
-            exitButton.Text = "EXIT";
-            exitButton.UseVisualStyleBackColor = false;
-            exitButton.Click += exitButton_Click;
+            this.exitButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.exitButton.Location = new System.Drawing.Point(21, 326);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(231, 29);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.Text = "EXIT";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // Dollar_Game
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(243, 288);
-            Controls.Add(exitButton);
-            Controls.Add(checkButton);
-            Controls.Add(groupBox4);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Name = "Dollar_Game";
-            Text = "Dollar_Game";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(278, 365);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.checkButton);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Dollar_Game";
+            this.Text = "Dollar_Game";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
