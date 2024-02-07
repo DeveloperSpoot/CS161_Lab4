@@ -15,58 +15,52 @@
             decimal days = 0;
 
             //Checking which workshop was selected and assigning the corresponding fees.
-            //NOTE: This could have also been with a switch case, which may have looked better.
 
-            if (workShopListBox.SelectedItem == "Handling Stress")
+            switch (workShopListBox.SelectedItem)
             {
-                registerFee = 1000m;
-                days = 3m;
-            }
+                case "Handling Stress":
+                    registerFee = 1000m;
+                    days = 3m;
+                    break;
 
-            if (workShopListBox.SelectedItem == "Time Management")
-            {
-                registerFee = 800m;
-                days = 3m;
-            }
+                case "Time Management":
+                    registerFee = 800m;
+                    days = 3m;
+                    break;
 
-            if (workShopListBox.SelectedItem == "Supervision Skills")
-            {
-                registerFee = 1500m;
-                days = 3m;
-            }
+                case "Supervision Skills":
+                    registerFee = 1500m;
+                    days = 3m;
+                    break;
 
-            if (workShopListBox.SelectedItem == "Negotation")
-            {
-                registerFee = 1300m;
-                days = 5m;
-            }
+                case "Negotation":
+                    registerFee = 1300m;
+                    days = 5m;
+                    break;
 
-            if (workShopListBox.SelectedItem == "How to Interview")
-            {
-                registerFee = 500m;
-                days = 1m;
+                case "How to Interview":
+                    registerFee = 1300m;
+                    days = 5m;
+                    break;
             }
 
             //Checking which location was selected and assigning the corresponding fees.
-            //NOTE: This could have also been with a switch case, which may have looked better.
 
-            if (locationListBox.SelectedItem == "Austin")
-            { lodgingFee = 150m; }
+            switch (locationListBox.SelectedItem)
+            {
+                case "Austin": lodgingFee = 150m; break;
 
-            if (locationListBox.SelectedItem == "Chicago")
-            { lodgingFee = 225m; }
+                case "Chicago": lodgingFee = 225m; break;
 
-            if (locationListBox.SelectedItem == "Dallas")
-            { lodgingFee = 175m; }
+                case "Dallas": lodgingFee = 175m; break;
 
-            if (locationListBox.SelectedItem == "Orlando")
-            { lodgingFee = 300m; }
+                case "Orlando": lodgingFee = 300m; break;
 
-            if (locationListBox.SelectedItem == "Phoenix")
-            { lodgingFee = 175m; }
+                case "Phoenix": lodgingFee = 175m; break;
 
-            if (locationListBox.SelectedItem == "Raleigh")
-            { lodgingFee = 150m; }
+                case "Raleigh": lodgingFee = 150m; break;
+
+            }
 
 
             //Calculating the total lodging fee base don the number of days and fee with the corresponding location.
