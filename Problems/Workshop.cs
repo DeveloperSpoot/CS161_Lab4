@@ -7,12 +7,15 @@
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registerButton_Click(object sender, EventArgs e)
         {
-            decimal total = 0;
+            //Delcaring vairables to hold fees amounts and number of days required;
             decimal registerFee = 0;
             decimal lodgingFee = 0;
             decimal days = 0;
+
+            //Checking which workshop was selected and assigning the corresponding fees.
+            //NOTE: This could have also been with a switch case, which may have looked better.
 
             if (workShopListBox.SelectedItem == "Handling Stress")
             {
@@ -44,6 +47,9 @@
                 days = 1m;
             }
 
+            //Checking which location was selected and assigning the corresponding fees.
+            //NOTE: This could have also been with a switch case, which may have looked better.
+
             if (locationListBox.SelectedItem == "Austin")
             { lodgingFee = 150m; }
 
@@ -62,17 +68,23 @@
             if (locationListBox.SelectedItem == "Raleigh")
             { lodgingFee = 150m; }
 
+
+            //Calculating the total lodging fee base don the number of days and fee with the corresponding location.
             lodgingFee = lodgingFee * days;
 
-            total = lodgingFee + registerFee;
+            //Calculating total, if that wasn't obvious.
+            decimal total = lodgingFee + registerFee;
 
+
+            //Updating display labels;
             registerationLabel.Text = registerFee.ToString("c");
             lodgingLabel.Text = lodgingFee.ToString("C");
             totalLabel.Text = total.ToString("C");
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        //Exit method for our exit button, imgaine that.
+        private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
